@@ -46,6 +46,9 @@ const getPrices = async() => {
 
     try {
         const json = JSON.parse(response.body);
+        prices['0x094616F0BdFB0b526bD735Bf66Eca0Ad254ca81F'.toLowerCase()] = json.binancecoin.usd;
+        prices['0xeD24FC36d5Ee211Ea25A80239Fb8C4Cfd80f12Ee'.toLowerCase()] = json.busd.usd;
+
         prices['0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c'.toLowerCase()] = json.binancecoin.usd;
         prices['0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56'.toLowerCase()] = json.busd.usd;
         prices['0x2170Ed0880ac9A755fd29B2688956BD959F933F8'.toLowerCase()] = json.ethereum.usd;
@@ -141,4 +144,4 @@ const init = async () => {
     }
 }
 
-init();   
+init();

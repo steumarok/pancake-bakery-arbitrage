@@ -154,6 +154,8 @@ const init = async () => {
         const start = performance.now();
         const calls = [];
 
+        console.log("onBlock")
+
         // const flashswap = new web3.eth.Contract(
         //     Flashswap.abi,
         //     Flashswap.networks[process.env.NETWORKID].address
@@ -274,5 +276,5 @@ const init = async () => {
     BlockSubscriber.subscribe(process.env.WSS_BLOCKS.split(','), onBlock);
 }
 
-init();    
+init();
 
